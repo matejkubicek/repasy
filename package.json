@@ -1,0 +1,27 @@
+{
+  "name": "repasy_03",
+  "version": "1.0.0",
+  "description": "Repasy web",
+  "main": "index.js",
+  "scripts": {
+    "scss": "node-sass --output-style compressed -o css scss",
+    "autoprefixer": "postcss -u autoprefixer -r css/*",
+    "serve": "browser-sync start --server --files 'css/*.css, js/*.js'",
+    "build:css": "npm run scss && npm run autoprefixer",
+    "watch:css": "onchange 'scss/*.scss' 'scss/*/*.scss' -- npm run build:css",
+    "run": "npm-run-parallel watch:css serve"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.5.1",
+    "browser-sync": "^2.26.5",
+    "eslint": "^5.16.0",
+    "htmlhint": "^0.11.0",
+    "node-sass": "^4.11.0",
+    "npm-run-parallel": "^0.6.0",
+    "onchange": "^5.2.0",
+    "postcss-cli": "^6.1.2",
+    "stylelint": "^10.0.1"
+  }
+}

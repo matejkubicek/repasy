@@ -1,0 +1,78 @@
+.nav {
+  position: fixed;
+  padding: 0.5em 1em 0;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.95);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 2200px;
+}
+
+.nav__logo {
+  width: 200%;
+}
+
+.nav__toggler {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.nav__toggler-row {
+  width: 30px;
+  height: 3px;
+  background-color: $font-col-pr;
+  margin: 6px 0;
+}
+
+.nav__list {
+  position: fixed;
+  right: 0;
+  height: 100vh;
+  background-color: $bg-col-pr;
+  padding: 2em;
+  z-index: -1;
+  min-width: 30%;
+  box-shadow: -20px 10px 15px $bg-col-pr;
+  display: none;
+}
+
+.nav__item {
+  list-style-type: none;
+  margin-top: 2em;
+  &::after {
+    content: "";
+    width: 30px;
+    height: 2px;
+    background-color: $bg-col-sc;
+    display: block;
+    margin-top: 0.5em;
+    transition: all 1s ease;
+  }
+  &:hover::after {
+    width: 100px;
+    transition: all 1s ease;
+  }
+}
+
+.nav__link:hover {
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 600px) {
+  .nav {
+    padding: 1em 3em 0;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .nav {
+    padding: 1em 6em 0;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .nav {
+    padding: 1em 9em 0;
+  }
+}

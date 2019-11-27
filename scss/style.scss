@@ -1,0 +1,20 @@
+@charset 'utf-8';
+
+// Normalize
+@import "base/normalize";
+
+// Variables
+@import "helpers/variables";
+
+// Typography
+@import "base/typography";
+
+// Base styles
+@import "base/base";
+
+// Components
+@import "components/nav";
+@import "components/main-header";
+@import "components/main-section";
+@import "components/footer";
+@import "components/bouncing-arrow"
