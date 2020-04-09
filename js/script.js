@@ -14,7 +14,7 @@ $(function() {
             var link = $(this).attr("href");
             $("html, body")
             .stop()
-            .animate({ scrollTop: $(link).offset().top - 73 }, 1000);
+            .animate({ scrollTop: $(link).offset().top - 64 }, 1000);
             $(".nav__list").slideUp(500);
             return false;
           });
